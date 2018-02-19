@@ -1,0 +1,12 @@
+.categoryItem {
+  padding: 1rem;
+  color: #0052cc;
+  box-sizing:border-box;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+  margin-bottom: 5px;
+}
+
+.categoryItem:hover {
+  background: #3385ff;
+  color: white;
+}

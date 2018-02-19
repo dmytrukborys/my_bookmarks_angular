@@ -1,0 +1,26 @@
+.categoryPanel {
+  width: 300px;
+  color: #0052cc;
+  box-sizing:border-box;
+  margin-right: 20px;
+}
+
+app-bookmarks {
+  width: 300px;
+  color: #0052cc;
+  box-sizing:border-box;
+  margin-right: 20px;
+}
+
+.bookmarkAddForm {
+  height: 200px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: #0052cc;
+  box-sizing:border-box;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+}
+

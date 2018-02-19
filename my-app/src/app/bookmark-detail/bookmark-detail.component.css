@@ -1,0 +1,27 @@
+input {
+  width: 100%;
+  font-size: 16px;
+  color: #757575;
+  background-color: #fafafa;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  padding: .25em;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.formSubmit, .formReset, .submitNewBookmark {
+  width:50%;
+  background: #80b3ff;
+  border-color:#99c2ff;
+  color: white;
+}
+
+.formSubmit:hover, .formReset:hover, .submitNewBookmark:hover {
+  background: #4d94ff;
+  color: white;
+}
+
+a, u {
+  text-decoration: none;
+}

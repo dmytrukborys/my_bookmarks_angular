@@ -1,0 +1,7 @@
+<div class="bookmarkEditForm" *ngIf="bookmark">
+  <div class="editBookmark"><span>Edit </span>{{bookmark.title}} <span><button (click)="goBack()">go back</button></span></div>
+  <input class="editTitle" type="text" [(ngModel)]="bookmark.title">
+  <input class="editCategory" type="text" [(ngModel)]="bookmark.category">
+  <input class="bookmarkLink" type="text" [(ngModel)]="bookmark.url">
+  <button (click)="save()">save</button>
+</div>

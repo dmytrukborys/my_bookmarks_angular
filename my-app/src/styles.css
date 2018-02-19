@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.headerBookmarks {
+  margin: 60px 0;
+  background: #80b3ff;
+  width:100%;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+}
+
+app-root {
+  display: flex;
+  flex-direction: row;
+  color: #0052cc;
+  flex-wrap:nowrap;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}

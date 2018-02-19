@@ -1,0 +1,27 @@
+<!-- <div class="bookmarkAddForm">
+  <div class="editBookmark"><span>Add new bookmark</span> <span><button (click)="goBack()">go back</button></span></div>
+  <label>Bookmark title:<input class="editTitle" #title></label>
+  <label>Bookmark category:<input class="editCategory" #category></label>
+  <label>Bookmark url:<input class="bookmarkLink" #url></label>
+  <label>
+    <button (click)="add(title.value, category.value, url.value); title.value='', category.value='', url.value=''">add</button>
+  </label>
+</div>
+-->
+
+<app-bookmark-search></app-bookmark-search>
+
+ <div class="bookmarkItem" *ngFor="let bookmark of bookmarks">
+  <div class="bookmarkHeader">
+    <a href="#" target="_blank">
+      <h2 class="bookmarkTitle">{{bookmark.title}}</h2>
+    </a>
+
+      <div class="dropdown-content">
+        <a class="dropdownEdit" routerLink="/edit/{{bookmark.id}}">edit</a>
+        <button class="delete" title="delete"
+                (click)="delete(bookmark)">x</button>
+      </div>
+  </div>
+</div>
+
