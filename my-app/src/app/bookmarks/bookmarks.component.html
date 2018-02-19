@@ -1,27 +1,25 @@
 <div class="bookmarkAddForm">
-  <div class="editBookmark"><span>Add new bookmark</span> <span><button (click)="goBack()">go back</button></span></div>
-  <label>Bookmark title:<input class="editTitle" #title></label>
-  <label>Bookmark category:<input class="editCategory" #newcategory></label>
-  <label>Bookmark url:<input class="bookmarkLink" #url></label>
-  <label>
-    <button (click)="add(title.value, newcategory.value, url.value); title.value=''; newcategory.value=''; url.value=''">add</button>
-  </label>
+  <div>Bookmark title:</div>
+  <input class="editTitle" #title>
+  <div>Bookmark category:</div>
+  <input class="editCategory" #newcategory>
+  <div>Bookmark url:</div>
+  <input class="bookmarkLink" #url>
+  <button class="submitBookmark" (click)="add(title.value, newcategory.value, url.value); title.value=''; newcategory.value=''; url.value=''">Add new bookmark</button>
+
 </div>
 
-
-
-<app-bookmark-search></app-bookmark-search>
-
- <div class="bookmarkItem" *ngFor="let bookmark of bookmarks  | categoryfilter:category">
+<div class="bookmarkItem" *ngFor="let bookmark of bookmarks  | categoryfilter:category">
   <div class="bookmarkHeader">
     <a href="#" target="_blank">
       <h2 class="bookmarkTitle">{{bookmark.title}}</h2>
     </a>
 
-      <div class="dropdown-content">
-        <a class="dropdownEdit" routerLink="/edit/{{bookmark.id}}">edit</a>
-        <button class="delete" title="delete"
-                (click)="delete(bookmark)">x</button>
-      </div>
+    <div class="dropdown-content">
+      <a class="dropdownEdit" routerLink="/edit/{{bookmark.id}}">edit</a>
+      <button class="delete" title="delete"
+              (click)="delete(bookmark)">x
+      </button>
+    </div>
   </div>
 </div>
