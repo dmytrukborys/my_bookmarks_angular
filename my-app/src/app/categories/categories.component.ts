@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Category} from '../category';
 import {CategoryService} from '../category.service';
+import {SelectedCategoryService} from "../selected.category.service";
 
 
 @Component({
@@ -15,9 +16,17 @@ export class CategoriesComponent implements OnInit {
       .subscribe(categories => this.categories = categories);
   }
 
+  onSelectCategory(category: Category) : void {
+    this.selectedCategoryService.changeCategory(category.name);
+  }
+
+  reset(category: Category) : void {
+    this.selectedCategoryService.changeCategory("*");
+  }
+
   categories: Category[];
 
-  constructor(private categoryService: CategoryService) {
+  constructor(private categoryService: CategoryService, private selectedCategoryService: SelectedCategoryService) {
   }
 
   ngOnInit() {

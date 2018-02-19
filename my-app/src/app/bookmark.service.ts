@@ -49,13 +49,13 @@ export class BookmarkService {
     );
   }
 
-  /** POST: add a new bookmark to the server
+  // POST: add a new bookmark to the server
   addBookmark (bookmark: Bookmark): Observable<Bookmark> {
     return this.http.post<Bookmark>(this.bookmarksUrl, bookmark, httpOptions).pipe(
-      tap((bookmark: Bookmark) => this.log(`added hero w/ id=${bookmark.id}`)),
+      tap(bookmark => console.log(bookmark)),
       catchError(this.handleError<Bookmark>('addBookmarks'))
     );
-  }*/
+  }
 
 
   /** DELETE: delete the bookmark from the server */

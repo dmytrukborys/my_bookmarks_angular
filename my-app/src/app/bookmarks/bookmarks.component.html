@@ -1,17 +1,18 @@
-<!-- <div class="bookmarkAddForm">
+<div class="bookmarkAddForm">
   <div class="editBookmark"><span>Add new bookmark</span> <span><button (click)="goBack()">go back</button></span></div>
   <label>Bookmark title:<input class="editTitle" #title></label>
-  <label>Bookmark category:<input class="editCategory" #category></label>
+  <label>Bookmark category:<input class="editCategory" #newcategory></label>
   <label>Bookmark url:<input class="bookmarkLink" #url></label>
   <label>
-    <button (click)="add(title.value, category.value, url.value); title.value='', category.value='', url.value=''">add</button>
+    <button (click)="add(title.value, newcategory.value, url.value); title.value=''; newcategory.value=''; url.value=''">add</button>
   </label>
 </div>
--->
+
+
 
 <app-bookmark-search></app-bookmark-search>
 
- <div class="bookmarkItem" *ngFor="let bookmark of bookmarks">
+ <div class="bookmarkItem" *ngFor="let bookmark of bookmarks  | categoryfilter:category">
   <div class="bookmarkHeader">
     <a href="#" target="_blank">
       <h2 class="bookmarkTitle">{{bookmark.title}}</h2>
@@ -24,4 +25,3 @@
       </div>
   </div>
 </div>
-

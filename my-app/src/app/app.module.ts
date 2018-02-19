@@ -13,6 +13,8 @@ import {CategoryService} from "./category.service";
 import {BookmarkService} from "./bookmark.service";
 import { AppRoutingModule } from './app-routing.module';
 import { BookmarkSearchComponent } from './bookmark-search/bookmark-search.component';
+import {CategoryFilterPipe} from './categories/category-filter.pipe';
+import {SelectedCategoryService} from "./selected.category.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BookmarkSearchComponent } from './bookmark-search/bookmark-search.compo
     BookmarksComponent,
     CategoriesComponent,
     BookmarkDetailComponent,
-    BookmarkSearchComponent
+    BookmarkSearchComponent,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { BookmarkSearchComponent } from './bookmark-search/bookmark-search.compo
   ],
   providers: [
     CategoryService,
-    BookmarkService
+    BookmarkService,
+    SelectedCategoryService
   ],
   bootstrap: [AppComponent]
 })

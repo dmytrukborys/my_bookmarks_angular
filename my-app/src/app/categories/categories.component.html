@@ -1,2 +1,2 @@
-<div><a routerLink="/bookmarks">Categories list</a></div>
-<div *ngFor="let category of categories" class="categoryItem">{{category.name}}</div>
+<div (click)="reset()"><a>Categories list</a></div>
+<div (click)="onSelectCategory(category)" *ngFor="let category of categories" class="categoryItem">{{category.name}}</div>
